@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Assistant - Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mental Health Assistant</h1>
+        <p>Your Virtual Support System</p>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('chat') }}">Chat</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="signup-section">
+        <h2>Sign Up</h2>
+        <form action="#" method="POST">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" min="0" max="150"><br>
+            <input type="submit" value="Sign Up">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mental Health Assistant</p>
+    </footer>
+</body>
+</html>

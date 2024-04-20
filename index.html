@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+
+        .header-content {
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .header-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+
+
+        }
+
+        .header-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .flexing nav{
+            display: flex;
+            flex-direction: row;
+            color:black;
+            background-color: #af4c7d;
+            
+        }
+
+        .flexing nav ul {
+            list-style: none;
+            
+           
+            
+            flex-direction: row;
+            color:black;
+            background-color: #af4c7d;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+
+        section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        section ul li {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 18px;
+            margin: 0;
+        }
+        .greens{
+            color:black;
+        }
+        .flexing{
+            display: flex;
+            flex-direction: column;
+          
+
+        }
+        .navs ul{
+            display:inline;
+            
+            height: fit-content;
+            
+
+        }
+        .navs ul li{
+            display: inline;    
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="flexing">
+                        <div class="header-content">
+                            <h1 class="greens">Mental Health Assistant</h1>
+                             <p class="greens">Your Virtual Support System</p>
+                             <div class="navs">
+                                <ul>
+                                 <li><a href="{{ url_for('index') }}">Home</a></li>
+                                 <li><a href="{{ url_for('chat') }}">Chat</a></li>
+                                 <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                                 <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+                               </ul>
+                                <div class="menu-icon">&#9776;</div>
+     
+                            </div>
+                         </div>
+                          
+            </div>
+        </div>
+    </header>
+
+    <section class="intro-section">
+        <div class="container">
+            <h2>Welcome to Your Mental Health Companion</h2>
+            <p>Feeling overwhelmed? You're not alone. Our virtual assistant is here to provide support and resources for your mental well-being.</p>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <h2>Key Features</h2>
+            <ul>
+                <li>24/7 Chat Support</li>
+                <li>Resources for Coping</li>
+                <li>Language and Culture Friendly</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="get-started-section">
+        <div class="container">
+            <h2>Get Started</h2>
+            <p>Start your journey towards better mental health today. Chat with our virtual assistant and explore available resources.</p>
+            <a href="{{ url_for('chat') }}">Chat Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mental Health Assistant</p>
+        </div>
+    </footer>
+</body>
+</html>
